@@ -59,6 +59,9 @@ class Example(object):
         self.idx = idx
         self.source = source
         self.target = target
+    
+    def __str__(self) -> str:
+        return self.source, self.target
 
 
 def read_examples(query_file, question_file):
