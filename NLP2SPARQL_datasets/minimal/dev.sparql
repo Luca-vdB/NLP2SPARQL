@@ -1,0 +1,2 @@
+select distinct var_uri where brack_open <dbr_Army_Group_Oberrhein_ attr_open Germany attr_close > <dbp_notableCommanders> var_uri sep_dot <dbr_Kriminalpolizei> <dbo_leader> var_uri brack_close
+select distinct var_uri where brack_open <dbr_Erica_Frank> <dbo_institution> var_uri sep_dot <dbr_Ivan_Toplak> <dbo_managerClub> var_uri brack_close

@@ -70,7 +70,7 @@ def read_examples(query_file, question_file):
     with open(query_file, encoding="utf-8") as query_f:
         with open(question_file, encoding='utf-8') as question_f:
             for idx, (query, question) in enumerate(zip(query_f, question_f)):
-                print(question.strip(), query.strip())
+                #print(question.strip(), query.strip())
                 examples.append(
                     Example(
                         idx=idx,
@@ -270,7 +270,7 @@ def main():
 
     if args.load_model_path is not None:
         logger.info("reload model from {}".format(args.load_model_path))
-        model.load_state_dict(torch.load(args.load_model_path), strict=False)
+        model.load_state_dict(torch.load(args.load_model_path))  # Removed  strict=False, need to fix this!
 
     model.to(device)
     if args.local_rank != -1:
@@ -291,11 +291,11 @@ def main():
         if args.dev_filename is not None:
             files.append(args.dev_filename)
         if args.test_filename is not None:
-            files.append(args.test_filename)
+            #files.append(args.test_filename)
+            pass
         for idx, file in enumerate(files):
             logger.info("Test file: {}".format(file))
             eval_examples = read_examples(file + "." + args.source, file + "." + args.target)
-            print(eval_examples)
             eval_features = convert_examples_to_features(eval_examples, tokenizer, args, stage='test')
             all_source_ids = torch.tensor([f.source_ids for f in eval_features], dtype=torch.long)
             all_source_mask = torch.tensor([f.source_mask for f in eval_features], dtype=torch.long)
@@ -319,6 +319,7 @@ def main():
                             t = t[:t.index(0)]
                         text = tokenizer.decode(t, clean_up_tokenization_spaces=False)
                         p.append(text)
+                        print(text)
             model.train()
             predictions = []
             pred_str = []
@@ -337,7 +338,6 @@ def main():
                     predictions.append(str(gold.idx) + '\t' + ref)
                     f.write(str(gold.idx) + '\t' + ref + '\n')
                     f1.write(str(gold.idx) + '\t' + gold.target + '\n')
-            print(label_str, pred_str)
             bl_score = corpus_bleu(label_str, pred_str) * 100
             logger.info("  %s = %s " % ("BLEU", str(round(bl_score, 4))))
             logger.info("  " + "*" * 20)
