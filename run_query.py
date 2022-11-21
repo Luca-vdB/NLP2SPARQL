@@ -70,6 +70,7 @@ def read_examples(query_file, question_file):
     with open(query_file, encoding="utf-8") as query_f:
         with open(question_file, encoding='utf-8') as question_f:
             for idx, (query, question) in enumerate(zip(query_f, question_f)):
+                print(question.strip(), query.strip())
                 examples.append(
                     Example(
                         idx=idx,
