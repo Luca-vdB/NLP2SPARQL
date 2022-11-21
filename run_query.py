@@ -337,7 +337,7 @@ def main():
                     predictions.append(str(gold.idx) + '\t' + ref)
                     f.write(str(gold.idx) + '\t' + ref + '\n')
                     f1.write(str(gold.idx) + '\t' + gold.target + '\n')
-            print(label_str, pred_str)
+                    print(pred_str)
             bl_score = corpus_bleu(label_str, pred_str) * 100
             logger.info("  %s = %s " % ("BLEU", str(round(bl_score, 4))))
             logger.info("  " + "*" * 20)
