@@ -450,8 +450,7 @@ def main():
             with open('example.sparql', 'w', encoding='utf-8') as file:
                 file.write(args.user_query)
             
-            files.append('example.sparql')
-            files.append('example.en')
+            files.append('example')
         
         #if args.dev_filename is not None:
             #files.append(args.dev_filename)
