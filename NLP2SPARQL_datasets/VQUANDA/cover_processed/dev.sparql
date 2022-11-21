@@ -1,0 +1,500 @@
+ask where brack_open <ent> <dbp_domain> <ent> brack_close
+ask where brack_open <ent> <dbp_religiousAffiliation> <ent> brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_predecessor> <ent> sep_dot var_uri <dbo_company> var_x sep_dot var_uri <rdf_type> <dbo_televisionShow> brack_close
+select distinct var_uri where brack_open <ent> <dbp_motto> var_uri sep_dot <ent> <dbo_academicDiscipline> var_uri brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_battle> <ent> sep_dot var_x <dbo_battle> var_uri brack_close
+select distinct var_uri where brack_open var_x <dbo_album> <ent> sep_dot var_uri <dbo_openingTheme> var_x sep_dot var_uri <rdf_type> <dbo_televisionShow> brack_close
+select distinct var_uri where brack_open <ent> <dbo_species> var_uri brack_close
+select distinct var_uri where brack_open var_x <dbo_residence> <ent> sep_dot var_x <dbo_nominee> var_uri sep_dot var_x <rdf_type> <dbo_officeHolder> brack_close
+select distinct var_uri where brack_open var_uri <dbo_formerTeam> <ent> sep_dot var_uri <dbp_currentTeam> <ent> sep_dot var_uri <rdf_type> <dbo_americanFootballPlayer> brack_close
+select distinct var_uri where brack_open var_x <dbo_locationCountry> <ent> sep_dot var_x <dbo_locationCountry> var_uri sep_dot var_x <rdf_type> <dbo_company> brack_close
+select distinct var_uri where brack_open <ent> <dbo_nearestCity> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_designer> var_uri sep_dot <ent> <dbo_designer> var_uri sep_dot brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_currentMember> <ent> sep_dot var_x <dbo_bandMember> var_uri sep_dot var_uri <rdf_type> <dbo_person> brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_headquarter> <ent> sep_dot var_x <dbo_leader> var_uri sep_dot var_uri <rdf_type> <dbo_politician> brack_close
+select distinct var_uri where brack_open var_x <dbo_product> <ent> sep_dot var_x <dbo_parent> var_uri sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_assembly> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbp_nickname> var_uri sep_dot <ent> <dbp_nickname> var_uri sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_party> var_x sep_dot var_x <dbo_ideology> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_uri <dbo_type> <ent> sep_dot var_uri <dbp_mission> <ent> sep_dot var_uri <rdf_type> <dbo_astronaut> brack_close
+select distinct var_uri where brack_open <ent> <dbo_region> var_uri sep_dot <ent> <dbo_destination> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_author> var_uri sep_dot <ent> <dbp_narrated> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_president> var_uri brack_close
+select distinct var_uri where brack_open var_x <dbo_deathPlace> <ent> sep_dot var_x <dbo_restingPlace> var_uri sep_dot var_x <rdf_type> <dbo_congressman> brack_close
+select distinct var_uri where brack_open var_x <dbp_sisterNames> <ent> sep_dot var_uri <dbo_network> var_x sep_dot var_uri <rdf_type> <dbo_televisionShow> brack_close
+select distinct var_uri where brack_open <ent> <dbo_author> var_uri brack_close
+select distinct var_uri where brack_open var_uri <dbo_founder> <ent> sep_dot var_uri <rdf_type> <dbo_magazine> brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_destination> <ent> sep_dot var_x <dbo_destination> var_uri brack_close
+select distinct var_uri where brack_open var_x <dbo_type> <ent> sep_dot var_x <dbo_servingRailwayLine> var_uri sep_dot var_x <rdf_type> <dbo_station> brack_close
+select distinct var_uri where brack_open <ent> <dbp_allegiance> var_uri brack_close
+select distinct var_uri where brack_open var_uri <dbo_place> <ent> sep_dot var_uri <dbo_commander> <ent> sep_dot var_uri <rdf_type> <dbo_militaryConflict> brack_close
+select distinct var_uri where brack_open <ent> <dbo_restingPlace> var_uri brack_close
+select distinct var_uri where brack_open var_uri <dbo_formerBandMember> <ent> sep_dot var_uri <dbp_pastMembers> <ent> sep_dot var_uri <rdf_type> <dbo_band> brack_close
+select distinct var_uri where brack_open var_uri <dbo_coach> <ent> sep_dot var_uri <rdf_type> <dbo_basketballTeam> brack_close
+select distinct var_uri where brack_open <ent> <dbo_successor> var_x sep_dot var_x <dbo_restingPlace> var_uri sep_dot var_x <rdf_type> <dbo_politician> brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_birthPlace> <ent> sep_dot var_x <dbo_knownFor> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_x <dbo_college> <ent> sep_dot var_uri <dbo_president> var_x sep_dot var_uri <rdf_type> <dbo_basketballTeam> brack_close
+select distinct var_uri where brack_open <ent> <dbo_occupation> var_x sep_dot var_x <dbo_owner> var_uri sep_dot var_x <rdf_type> <dbo_bank> brack_close
+select distinct var_uri where brack_open var_x <dbo_type> <ent> sep_dot var_x <dbo_region> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_uri <dbo_capital> <ent> sep_dot var_uri <dbo_capital> <ent> sep_dot var_uri <rdf_type> <dbo_country> brack_close
+select distinct var_uri where brack_open var_uri <dbo_targetAirport> <ent> brack_close
+select distinct var_uri where brack_open <ent> <dbp_area> var_uri brack_close
+select distinct var_uri where brack_open var_x <dbo_capital> <ent> sep_dot var_uri <dbo_location> var_x sep_dot brack_close
+ask where brack_open <ent> <dbo_instrument> <ent> brack_close
+select distinct var_uri where brack_open <ent> <dbo_citizenship> var_uri sep_dot <ent> <dbo_citizenship> var_uri sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbp_label> var_uri sep_dot <ent> <dbo_parentOrganisation> var_uri brack_close
+select distinct var_uri where brack_open var_x <dbo_nationality> <ent> sep_dot var_uri <dbo_voice> var_x sep_dot var_uri <rdf_type> <dbo_televisionShow> brack_close
+select distinct var_uri where brack_open <ent> <dbp_title> var_uri brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_uri <dbo_channel> <ent> sep_dot var_uri <rdf_type> <dbo_televisionShow> brack_close
+select distinct var_uri where brack_open var_x <dbo_knownFor> <ent> sep_dot var_uri <dbo_owner> var_x sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbp_nationalOrigin> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_headquarter> var_uri brack_close
+select distinct var_uri where brack_open var_uri <dbo_doctoralAdvisor> <ent> sep_dot var_uri <rdf_type> <dbo_scientist> brack_close
+select distinct var_uri where brack_open var_x <dbo_successor> <ent> sep_dot var_x <dbo_majorShrine> var_uri sep_dot var_x <rdf_type> <dbo_monarch> brack_close
+select distinct var_uri where brack_open <ent> <dbp_borough> var_uri sep_dot <ent> <dbo_localAuthority> var_uri brack_close
+select distinct var_uri where brack_open var_uri <dbo_doctoralStudent> <ent> brack_close
+select distinct var_uri where brack_open <ent> <dbo_successor> var_x sep_dot var_x <dbp_title> var_uri sep_dot brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_deathPlace> <ent> sep_dot var_x <dbo_occupation> var_uri sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_species> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_lieutenant> var_x sep_dot var_x <dbo_deathPlace> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_uri <dbo_largestCity> <ent> sep_dot brack_close
+select distinct var_uri where brack_open var_x <dbo_nationality> <ent> sep_dot var_uri <dbo_writer> var_x sep_dot var_uri <rdf_type> <dbo_film> brack_close
+select distinct var_uri where brack_open var_uri <dbo_creator> <ent> sep_dot var_uri <dbo_creator> <ent> sep_dot var_uri <rdf_type> <dbo_comicsCharacter> brack_close
+select distinct var_uri where brack_open <ent> <dbo_automobilePlatform> var_uri sep_dot <ent> <dbo_manufacturer> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_builder> var_uri brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_uri <dbp_office> <ent> sep_dot brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_award> <ent> sep_dot var_x <dbo_award> var_uri brack_close
+ask where brack_open <ent> <dbo_county> <ent> brack_close
+ask where brack_open <ent> <dbo_sourceRegion> <ent> brack_close
+select distinct var_uri where brack_open var_uri <dbp_themeMusicComposer> <ent> sep_dot var_uri <rdf_type> <dbo_televisionShow> brack_close
+select distinct var_uri where brack_open var_x <dbo_operatedBy> <ent> sep_dot var_x <dbo_routeStart> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_uri <dbo_leader> <ent> sep_dot var_uri <rdf_type> <dbo_country> brack_close
+select distinct var_uri where brack_open var_uri <dbo_cinematography> <ent> sep_dot var_uri <rdf_type> <dbo_film> brack_close
+select distinct var_uri where brack_open <ent> <dbo_sourceCountry> var_uri sep_dot <ent> <dbo_birthPlace> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_sport> var_uri sep_dot <ent> <dbo_occupation> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_homeStadium> var_x sep_dot var_x <dbp_nickname> var_uri sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_routeEnd> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_battle> var_x sep_dot var_x <dbo_territory> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_uri <dbo_keyPerson> <ent> brack_close
+select distinct var_uri where brack_open <ent> <dbo_birthPlace> var_uri sep_dot <ent> <dbo_deathPlace> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbp_playedFor> var_uri sep_dot <ent> <dbp_playedFor> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_uri <dbp_prizes> <ent> sep_dot var_uri <rdf_type> <dbo_scientist> brack_close
+select distinct var_uri where brack_open var_uri <dbo_related> <ent> sep_dot var_uri <dbo_related> <ent> sep_dot brack_close
+select distinct var_uri where brack_open var_uri <dbp_sourceLocation> <ent> sep_dot var_uri <dbp_mouthLocation> <ent> sep_dot var_uri <rdf_type> <dbo_river> brack_close
+select distinct var_uri where brack_open var_x <dbo_associatedBand> <ent> sep_dot var_uri <dbp_themeMusicComposer> var_x sep_dot var_uri <rdf_type> <dbo_televisionShow> brack_close
+select distinct var_uri where brack_open var_uri <dbo_city> <ent> sep_dot var_uri <dbo_outflow> <ent> sep_dot var_uri <rdf_type> <dbo_sea> brack_close
+select distinct var_uri where brack_open var_x <dbo_operator> <ent> sep_dot var_x <dbo_architect> var_uri sep_dot var_x <rdf_type> <dbo_stadium> brack_close
+select distinct var_uri where brack_open var_x <dbp_schooltype> <ent> sep_dot var_x <dbo_sport> var_uri sep_dot brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_publisher> <ent> sep_dot var_x <dbo_nonFictionSubject> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_x <dbp_role> <ent> sep_dot var_uri <dbo_militaryUnit> var_x sep_dot brack_close
+select distinct var_uri where brack_open var_uri <dbo_sourceRegion> <ent> sep_dot var_uri <dbo_riverMouth> <ent> sep_dot var_uri <rdf_type> <dbo_river> brack_close
+select distinct var_uri where brack_open var_x <dbo_state> <ent> sep_dot var_x <dbo_athletics> var_uri sep_dot var_x <rdf_type> <dbo_university> brack_close
+select distinct var_uri where brack_open <ent> <dbo_successor> var_x sep_dot var_x <dbo_almaMater> var_uri sep_dot var_x <rdf_type> <dbo_senator> brack_close
+select distinct var_uri where brack_open <ent> <dbo_profession> var_uri sep_dot <ent> <dbp_office> var_uri brack_close
+ask where brack_open <ent> <dbo_sourceRegion> <ent> brack_close
+select distinct var_uri where brack_open <ent> <dbo_county> var_uri brack_close
+select distinct var_uri where brack_open var_x <dbo_related> <ent> sep_dot var_x <dbo_country> var_uri sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbp_title> var_x sep_dot var_x <dbo_country> var_uri sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_writer> var_uri sep_dot <ent> <dbo_author> var_uri sep_dot brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_executiveProducer> <ent> sep_dot var_uri <dbo_series> var_x sep_dot var_uri <rdf_type> <dbo_fictionalCharacter> brack_close
+select distinct var_uri where brack_open <ent> <dbp_deathDate> var_uri brack_close
+select distinct var_uri where brack_open var_x <dbo_affiliation> <ent> sep_dot var_x <dbo_sport> var_uri sep_dot var_x <rdf_type> <dbo_university> brack_close
+select distinct var_uri where brack_open var_x <dbo_starring> <ent> sep_dot var_x <dbo_producer> var_uri sep_dot var_x <rdf_type> <dbo_film> brack_close
+select distinct var_uri where brack_open var_uri <dbo_superintendent> <ent> sep_dot var_uri <rdf_type> <dbo_organisation> brack_close
+select distinct var_uri where brack_open <ent> <dbp_branch> var_uri sep_dot <ent> <dbp_branch> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_x <dbo_child> <ent> sep_dot var_x <dbo_award> var_uri sep_dot var_x <rdf_type> <dbo_person> brack_close
+select distinct var_uri where brack_open var_uri <dbp_arena> <ent> sep_dot var_uri <dbo_president> <ent> sep_dot var_uri <rdf_type> <dbo_basketballTeam> brack_close
+select distinct var_uri where brack_open var_x <dbp_venue> <ent> sep_dot var_x <dbp_venue> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_x <dbo_designer> <ent> sep_dot var_x <dbo_maintainedBy> var_uri sep_dot var_x <rdf_type> <dbo_bridge> brack_close
+select distinct var_uri where brack_open <ent> <dbp_address> var_uri brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbp_sisterNames> <ent> sep_dot var_uri <dbo_network> var_x sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_director> var_uri sep_dot <ent> <dbo_animator> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_developer> var_uri sep_dot <ent> <dbo_successor> var_uri brack_close
+select distinct var_uri where brack_open var_uri <dbo_relative> <ent> sep_dot var_uri <dbo_relative> <ent> sep_dot brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_sport> <ent> sep_dot var_x <dbo_sport> var_uri brack_close
+select distinct var_uri where brack_open var_uri <dbo_team> <ent> sep_dot var_uri <rdf_type> <dbo_baseballPlayer> brack_close
+select distinct var_uri where brack_open <ent> <dbo_writer> var_x sep_dot var_x <dbo_party> var_uri sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_service> var_uri sep_dot <ent> <dbo_award> var_uri brack_close
+select distinct var_uri where brack_open var_x <dbo_vicePresident> <ent> sep_dot var_x <dbo_restingPlace> var_uri sep_dot var_x <rdf_type> <dbo_memberOfParliament> brack_close
+select distinct var_uri where brack_open <ent> <dbo_timeZone> var_uri brack_close
+select distinct var_uri where brack_open var_x <dbp_hubs> <ent> sep_dot var_x <dbp_hubs> var_uri sep_dot var_x <rdf_type> <dbo_airline> brack_close
+select distinct var_uri where brack_open var_x <dbo_launchSite> <ent> sep_dot var_x <dbo_launchSite> var_uri sep_dot var_x <rdf_type> <dbo_rocket> brack_close
+select distinct var_uri where brack_open var_x <dbo_restingPlace> <ent> sep_dot var_uri <dbo_author> var_x sep_dot var_uri <rdf_type> <dbo_book> brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbp_guests> <ent> sep_dot var_x <dbp_guests> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_origin> var_uri brack_close
+select distinct var_uri where brack_open var_x <dbp_design> <ent> sep_dot var_x <dbo_crosses> var_uri sep_dot brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_affiliation> <ent> sep_dot var_x <dbo_sport> var_uri sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_religion> var_uri sep_dot <ent> <dbo_religion> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_regionServed> var_uri sep_dot <ent> <dbo_country> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_relation> var_uri sep_dot <ent> <dbo_leader> var_uri brack_close
+select distinct var_uri where brack_open var_x <dbo_league> <ent> sep_dot var_x <dbp_name> var_uri sep_dot var_x <rdf_type> <dbo_soccerClubSeason> brack_close
+select distinct var_uri where brack_open var_uri <dbo_predecessor> <ent> sep_dot var_uri <dbo_deputy> <ent> sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_ingredient> var_uri brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_homeStadium> <ent> sep_dot var_x <dbo_homeStadium> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_computingPlatform> var_uri sep_dot <ent> <dbo_developer> var_uri sep_dot var_uri <rdf_type> <dbo_company> brack_close
+select distinct var_uri where brack_open <ent> <dbo_successor> var_uri sep_dot <ent> <dbo_appointer> var_uri brack_close
+select distinct var_uri where brack_open var_uri <dbo_academicAdvisor> <ent> sep_dot var_uri <rdf_type> <dbo_scientist> brack_close
+select distinct var_uri where brack_open var_uri <dbo_writer> <ent> sep_dot var_uri <rdf_type> <dbo_televisionShow> brack_close
+select distinct var_uri where brack_open var_uri <dbp_notableInstruments> <ent> sep_dot var_uri <dbo_instrument> <ent> sep_dot var_uri <rdf_type> <dbo_musicalArtist> brack_close
+ask where brack_open <ent> <dbp_nationalMotto> <ent> brack_close
+select distinct var_uri where brack_open <ent> <dbo_composer> var_uri sep_dot <ent> <dbo_composer> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_uri <dbo_distributor> <ent> sep_dot var_uri <dbo_musicComposer> <ent> sep_dot var_uri <rdf_type> <dbo_film> brack_close
+select distinct var_uri where brack_open <ent> <dbo_homeStadium> var_uri brack_close
+select distinct var_uri where brack_open var_uri <dbo_doctoralStudent> <ent> sep_dot var_uri <dbo_knownFor> <ent> sep_dot var_uri <rdf_type> <dbo_scientist> brack_close
+select distinct var_uri where brack_open var_x <dbo_knownFor> <ent> sep_dot var_x <dbo_almaMater> var_uri sep_dot var_x <rdf_type> <dbo_scientist> brack_close
+select distinct var_uri where brack_open var_uri <dbo_city> <ent> sep_dot var_uri <dbo_city> <ent> sep_dot var_uri <rdf_type> <dbo_sea> brack_close
+select distinct var_uri where brack_open <ent> <dbo_governingBody> var_uri brack_close
+select distinct var_uri where brack_open var_uri <dbo_spouse> <ent> sep_dot brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_uri <dbo_director> <ent> sep_dot var_uri <rdf_type> <dbo_film> brack_close
+select distinct var_uri where brack_open var_uri <dbo_species> <ent> brack_close
+select distinct var_uri where brack_open <ent> <dbo_notableWork> var_uri sep_dot <ent> <dbo_notableWork> var_uri sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_ethnicity> var_x sep_dot var_x <dbo_religion> var_uri sep_dot var_x <rdf_type> <dbo_ethnicGroup> brack_close
+select distinct var_uri where brack_open <ent> <dbo_draftTeam> var_uri sep_dot <ent> <dbp_playedFor> var_uri brack_close
+ask where brack_open <ent> <dbp_result> <ent> brack_close
+select distinct var_uri where brack_open var_uri <dbo_mouthPlace> <ent> sep_dot var_uri <dbo_sourcePlace> <ent> sep_dot var_uri <rdf_type> <dbo_river> brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_composer> <ent> sep_dot var_x <dbo_developer> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_x <dbo_capital> <ent> sep_dot var_uri <dbp_allegiance> var_x sep_dot var_uri <rdf_type> <dbo_officeHolder> brack_close
+select distinct var_uri where brack_open var_x <dbo_primeMinister> <ent> sep_dot var_x <dbo_battle> var_uri sep_dot var_x <rdf_type> <dbo_president> brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_artist> <ent> sep_dot var_x <dbo_language> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_x <dbo_leaderName> <ent> sep_dot var_uri <dbo_residence> var_x sep_dot brack_close
+ask where brack_open <ent> <dbo_institution> <ent> brack_close
+select distinct var_uri where brack_open var_uri <dbo_governor> <ent> brack_close
+select distinct var_uri where brack_open <ent> <dbo_animator> var_uri sep_dot <ent> <dbo_cinematography> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_family> var_uri brack_close
+select distinct var_uri where brack_open var_x <dbo_presenter> <ent> sep_dot var_x <dbp_judges> var_uri sep_dot var_x <rdf_type> <dbo_televisionShow> brack_close
+select distinct var_uri where brack_open var_uri <dbo_commandStructure> <ent> sep_dot var_uri <dbo_commandStructure> <ent> sep_dot var_uri <rdf_type> <dbo_militaryUnit> brack_close
+select distinct var_uri where brack_open var_uri <dbo_nearestCity> <ent> sep_dot var_uri <rdf_type> <dbo_protectedArea> brack_close
+select distinct var_uri where brack_open var_uri <dbo_product> <ent> sep_dot var_uri <dbo_product> <ent> sep_dot var_uri <rdf_type> <dbo_company> brack_close
+select distinct count attr_open var_uri attr_close where brack_open <ent> <dbo_city> var_uri sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_deathPlace> var_uri sep_dot <ent> <dbo_birthPlace> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_x <dbo_headquarter> <ent> sep_dot var_uri <dbo_religion> var_x sep_dot brack_close
+ask where brack_open <ent> <dbo_field> <ent> brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_uri <dbo_team> <ent> sep_dot var_uri <rdf_type> <dbo_athlete> brack_close
+select distinct var_uri where brack_open <ent> <dbo_automobilePlatform> var_uri sep_dot <ent> <dbo_parentCompany> var_uri brack_close
+select distinct var_uri where brack_open var_uri <dbo_nationality> <ent> brack_close
+select distinct var_uri where brack_open var_uri <dbp_foundation> <ent> sep_dot var_uri <dbo_service> <ent> sep_dot var_uri <rdf_type> <dbo_company> brack_close
+select distinct var_uri where brack_open var_x <dbo_affiliation> <ent> sep_dot var_x <dbp_area> var_uri sep_dot var_x <rdf_type> <dbo_broadcastNetwork> brack_close
+select distinct var_uri where brack_open <ent> <dbp_keyPeople> var_uri sep_dot <ent> <dbo_president> var_uri brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbp_branch> <ent> sep_dot var_x <dbo_president> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_uri <dbo_garrison> <ent> sep_dot var_uri <dbo_commandStructure> <ent> sep_dot var_uri <rdf_type> <dbo_militaryUnit> brack_close
+select distinct var_uri where brack_open var_x <dbp_licensee> <ent> sep_dot var_x <dbp_licensee> var_uri sep_dot var_x <rdf_type> <dbo_televisionStation> brack_close
+ask where brack_open <ent> <dbo_editing> <ent> brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_builder> <ent> sep_dot var_x <dbo_builder> var_uri brack_close
+select distinct var_uri where brack_open var_x <dbo_architect> <ent> sep_dot var_x <dbo_architect> var_uri sep_dot var_x <rdf_type> <dbo_building> brack_close
+select distinct var_uri where brack_open var_x <dbo_album> <ent> sep_dot var_x <dbo_musicalArtist> var_uri sep_dot var_x <rdf_type> <dbo_musicalWork> brack_close
+ask where brack_open <ent> <dbp_firstAired> <ent> brack_close
+select distinct var_uri where brack_open <ent> <dbo_family> var_uri brack_close
+ask where brack_open <ent> <dbo_automobilePlatform> <ent> brack_close
+select distinct var_uri where brack_open var_x <dbo_owner> <ent> sep_dot var_x <dbo_race> var_uri sep_dot var_x <rdf_type> <dbo_horse> brack_close
+select distinct var_uri where brack_open var_x <dbo_sourcePlace> <ent> sep_dot var_x <dbo_riverMouth> var_uri sep_dot brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_publisher> <ent> sep_dot var_x <dbo_genre> var_uri sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_location> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_college> var_uri sep_dot <ent> <dbo_almaMater> var_uri brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_uri <dbp_address> <ent> sep_dot var_uri <rdf_type> <dbo_venue> brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_athletics> <ent> sep_dot var_x <dbo_athletics> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_river> var_uri sep_dot <ent> <dbo_river> var_uri sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_sisterStation> var_x sep_dot var_x <dbo_formerBroadcastNetwork> var_uri sep_dot brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_uri <dbo_commandStructure> <ent> sep_dot var_uri <rdf_type> <dbo_militaryUnit> brack_close
+select distinct var_uri where brack_open var_x <dbo_locatedInArea> <ent> sep_dot var_x <dbo_designer> var_uri sep_dot var_x <rdf_type> <dbo_bridge> brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_uri <dbo_order> <ent> sep_dot var_uri <dbp_domain> <ent> brack_close
+select distinct var_uri where brack_open var_x <dbo_class> <ent> sep_dot var_x <dbo_related> var_uri sep_dot var_x <rdf_type> <dbo_automobile> brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_team> <ent> sep_dot var_x <dbo_formerTeam> var_uri sep_dot var_uri <rdf_type> <dbo_sportsTeam> brack_close
+select distinct var_uri where brack_open var_uri <dbo_commander> <ent> sep_dot var_uri <rdf_type> <dbo_militaryConflict> brack_close
+ask where brack_open <ent> <dbo_commandStructure> <ent> brack_close
+select distinct var_uri where brack_open <ent> <dbo_starring> var_x sep_dot var_x <dbo_influencedBy> var_uri sep_dot var_x <rdf_type> <dbo_comedian> brack_close
+select distinct var_uri where brack_open var_uri <dbo_board> <ent> sep_dot brack_close
+select distinct var_uri where brack_open var_x <dbo_birthPlace> <ent> sep_dot var_uri <dbo_director> var_x sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_highschool> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_nonFictionSubject> var_uri brack_close
+select distinct var_uri where brack_open var_uri <dbo_restingPlace> <ent> sep_dot var_uri <dbo_child> <ent> sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_battle> var_uri brack_close
+select distinct var_uri where brack_open var_x <dbo_related> <ent> sep_dot var_x <dbo_layout> var_uri sep_dot var_x <rdf_type> <dbo_automobile> brack_close
+ask where brack_open <ent> <dbo_assembly> <ent> brack_close
+select distinct var_uri where brack_open <ent> <dbo_hometown> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_affiliation> var_uri sep_dot <ent> <dbo_affiliation> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_uri <dbp_youthclubs> <ent> sep_dot var_uri <dbp_youthclubs> <ent> sep_dot brack_close
+select distinct var_uri where brack_open var_uri <dbo_leader> <ent> brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_mainInterest> <ent> sep_dot var_x <dbo_mainInterest> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_notablework> var_uri brack_close
+select distinct var_uri where brack_open var_x <dbo_child> <ent> sep_dot var_x <dbo_award> var_uri sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_debutTeam> var_uri sep_dot <ent> <dbo_debutTeam> var_uri brack_close
+ask where brack_open <ent> <dbo_largestCity> <ent> brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_uri <dbp_youthclubs> <ent> sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_builder> var_uri sep_dot <ent> <dbo_birthPlace> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_binomialAuthority> var_x sep_dot var_x <dbo_deathPlace> var_uri sep_dot var_x <rdf_type> <dbo_scientist> brack_close
+select distinct var_uri where brack_open var_uri <dbo_location> <ent> sep_dot var_uri <rdf_type> <dbo_sea> brack_close
+select distinct var_uri where brack_open var_uri <dbo_team> <ent> sep_dot var_uri <rdf_type> <dbo_basketballPlayer> brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_timeZone> <ent> sep_dot var_x <dbo_leaderName> var_uri sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_publisher> var_uri sep_dot <ent> <dbo_team> var_uri brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_breeder> <ent> sep_dot var_x <dbo_race> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_uri <dbo_affiliation> <ent> sep_dot var_uri <dbo_campus> <ent> sep_dot var_uri <rdf_type> <dbo_university> brack_close
+select distinct var_uri where brack_open <ent> <dbo_education> var_uri sep_dot <ent> <dbo_education> var_uri sep_dot brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_uri <dbo_doctoralAdvisor> <ent> sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_species> var_uri brack_close
+select distinct var_uri where brack_open var_x <dbo_hometown> <ent> sep_dot var_x <dbo_genre> var_uri sep_dot var_x <rdf_type> <dbo_band> brack_close
+ask where brack_open <ent> <dbo_routeEnd> <ent> sep_dot brack_close
+select distinct var_uri where brack_open var_x <dbo_militaryBranch> <ent> sep_dot var_x <dbo_religion> var_uri sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbp_borough> var_uri sep_dot <ent> <dbp_borough> var_uri sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_deathPlace> var_uri sep_dot <ent> <dbo_deathPlace> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_uri <dbo_developer> <ent> sep_dot var_uri <dbo_starring> <ent> sep_dot var_uri <rdf_type> <dbo_televisionShow> brack_close
+ask where brack_open <ent> <dbp_architecture> <ent> brack_close
+select distinct var_uri where brack_open <ent> <dbo_operator> var_uri sep_dot <ent> <dbo_location> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_municipality> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_series> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_restingPlace> var_uri sep_dot <ent> <dbo_restingPlace> var_uri sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_birthPlace> var_uri brack_close
+ask where brack_open <ent> <dbo_neighboringMunicipality> <ent> brack_close
+select distinct var_uri where brack_open var_uri <dbo_parent> <ent> sep_dot var_uri <dbo_spouse> <ent> sep_dot brack_close
+ask where brack_open <ent> <dbo_prospectTeam> <ent> brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_operatingSystem> <ent> sep_dot var_x <dbo_developer> var_uri sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_draftTeam> var_uri sep_dot <ent> <dbp_playedFor> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_type> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbp_playedFor> var_uri brack_close
+select distinct count attr_open var_uri attr_close where brack_open <ent> <dbp_guests> var_uri sep_dot brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_position> <ent> sep_dot var_x <dbo_team> var_uri sep_dot var_uri <rdf_type> <dbo_sportsTeam> brack_close
+select distinct var_uri where brack_open var_x <dbo_ethnicity> <ent> sep_dot var_x <dbo_deathCause> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_uri <dbo_doctoralStudent> <ent> sep_dot var_uri <dbo_doctoralStudent> <ent> sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_subsequentWork> var_x sep_dot var_x <dbo_writer> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_x <dbo_affiliation> <ent> sep_dot var_uri <dbo_leaderName> var_x sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_successor> var_x sep_dot var_x <dbo_restingPlace> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_uri <dbp_pastMembers> <ent> brack_close
+ask where brack_open <ent> <dbo_industry> <ent> brack_close
+select distinct var_uri where brack_open <ent> <dbo_operator> var_uri sep_dot <ent> <dbo_governingBody> var_uri brack_close
+select distinct var_uri where brack_open var_uri <dbo_leaderName> <ent> sep_dot var_uri <rdf_type> <dbo_country> brack_close
+ask where brack_open <ent> <dbo_jurisdiction> <ent> brack_close
+select distinct var_uri where brack_open var_x <dbo_owningOrganisation> <ent> sep_dot var_x <dbo_servingRailwayLine> var_uri sep_dot var_x <rdf_type> <dbo_station> brack_close
+select distinct var_uri where brack_open <ent> <dbo_distributor> var_x sep_dot var_x <dbo_locationCity> var_uri sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_artist> var_uri sep_dot <ent> <dbo_founder> var_uri brack_close
+select distinct var_uri where brack_open var_uri <dbo_partner> <ent> sep_dot brack_close
+ask where brack_open <ent> <dbo_sourceRegion> <ent> brack_close
+ask where brack_open <ent> <dbo_discoverer> <ent> brack_close
+select distinct var_uri where brack_open var_x <dbo_location> <ent> sep_dot var_x <dbo_firstDriver> var_uri sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_debutTeam> var_uri sep_dot <ent> <dbo_team> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_commander> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_partner> var_uri sep_dot <ent> <dbo_partner> var_uri sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_birthPlace> var_uri sep_dot <ent> <dbo_birthPlace> var_uri sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_employer> var_uri sep_dot <ent> <dbo_manufacturer> var_uri brack_close
+select distinct var_uri where brack_open var_uri <dbo_neighboringMunicipality> <ent> sep_dot brack_close
+select distinct var_uri where brack_open var_uri <dbo_distributor> <ent> sep_dot var_uri <dbo_writer> <ent> sep_dot var_uri <rdf_type> <dbo_film> brack_close
+select distinct var_uri where brack_open <ent> <dbo_deputy> var_x sep_dot var_x <dbo_nationality> var_uri sep_dot var_x <rdf_type> <dbo_chancellor> brack_close
+select distinct var_uri where brack_open <ent> <dbo_team> var_uri sep_dot <ent> <dbo_tenant> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_owner> var_uri sep_dot <ent> <dbo_owner> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_x <dbo_headquarter> <ent> sep_dot var_uri <dbo_company> var_x sep_dot var_uri <rdf_type> <dbo_televisionShow> brack_close
+select distinct var_uri where brack_open var_x <dbp_allegiance> <ent> sep_dot var_x <dbp_office> var_uri sep_dot var_x <rdf_type> <dbo_officeHolder> brack_close
+select distinct var_uri where brack_open var_x <dbo_birthPlace> <ent> sep_dot var_x <dbo_knownFor> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_x <dbp_beatifiedBy> <ent> sep_dot var_x <dbo_deathPlace> var_uri sep_dot var_x <rdf_type> <dbo_person> brack_close
+select distinct var_uri where brack_open var_uri <dbo_hometown> <ent> sep_dot var_uri <rdf_type> <dbo_person> brack_close
+select distinct var_uri where brack_open var_x <dbo_city> <ent> sep_dot var_x <dbo_sport> var_uri sep_dot var_x <rdf_type> <dbo_school> brack_close
+ask where brack_open <ent> <dbo_trainer> <ent> brack_close
+select distinct var_uri where brack_open var_x <dbo_automobilePlatform> <ent> sep_dot var_x <dbo_automobilePlatform> var_uri sep_dot var_x <rdf_type> <dbo_automobile> brack_close
+select distinct var_uri where brack_open var_x <dbo_capital> <ent> sep_dot var_x <dbo_country> var_uri sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbp_playedFor> var_uri sep_dot <ent> <dbo_formerTeam> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_x <dbo_commander> <ent> sep_dot var_x <dbo_territory> var_uri sep_dot var_x <rdf_type> <dbo_militaryConflict> brack_close
+select distinct var_uri where brack_open <ent> <dbo_ideology> var_uri sep_dot <ent> <dbo_ideology> var_uri sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbp_hostCity> var_x sep_dot var_x <dbo_largestCity> var_uri sep_dot var_x <rdf_type> <dbo_country> brack_close
+select distinct var_uri where brack_open var_uri <dbp_discipline> <ent> brack_close
+select distinct var_uri where brack_open <ent> <dbo_company> var_x sep_dot var_x <dbo_owner> var_uri sep_dot var_x <rdf_type> <dbo_bank> brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_uri <dbo_producer> <ent> sep_dot var_uri <rdf_type> <dbo_film> brack_close
+select distinct var_uri where brack_open <ent> <dbo_bandMember> var_x sep_dot var_x <dbo_associatedBand> var_uri sep_dot brack_close
+ask where brack_open <ent> <dbo_architecturalStyle> <ent> brack_close
+select distinct var_uri where brack_open var_uri <dbo_garrison> <ent> sep_dot var_uri <dbo_garrison> <ent> sep_dot var_uri <rdf_type> <dbo_militaryUnit> brack_close
+select distinct var_uri where brack_open var_x <dbo_commander> <ent> sep_dot var_x <dbo_territory> var_uri sep_dot var_x <rdf_type> <dbo_militaryConflict> brack_close
+select distinct var_uri where brack_open <ent> <dbp_licensee> var_uri sep_dot <ent> <dbo_almaMater> var_uri brack_close
+select distinct var_uri where brack_open var_uri <dbo_inflow> <ent> brack_close
+select distinct var_uri where brack_open <ent> <dbo_residence> var_uri sep_dot <ent> <dbo_deathPlace> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_distributor> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_locationCity> var_uri sep_dot <ent> <dbo_state> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_outflow> var_uri sep_dot <ent> <dbo_inflow> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_launchSite> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_border> var_uri brack_close
+select distinct var_uri where brack_open var_uri <dbo_successor> <ent> sep_dot var_uri <dbo_manufacturer> <ent> sep_dot var_uri <rdf_type> <dbo_informationAppliance> brack_close
+select distinct var_uri where brack_open var_uri <dbo_mouthMountain> <ent> brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_uri <dbo_regionServed> <ent> sep_dot var_uri <rdf_type> <dbo_company> brack_close
+select distinct var_uri where brack_open var_x <dbo_owner> <ent> sep_dot var_uri <dbo_network> var_x sep_dot var_uri <rdf_type> <dbo_televisionShow> brack_close
+select distinct var_uri where brack_open <ent> <dbo_largestCity> var_uri brack_close
+select distinct var_uri where brack_open var_uri <dbo_city> <ent> sep_dot var_uri <dbo_city> <ent> sep_dot var_uri <rdf_type> <dbo_sea> brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_deathCause> <ent> sep_dot var_x <dbo_award> var_uri sep_dot var_uri <rdf_type> <dbo_award> brack_close
+select distinct var_uri where brack_open var_uri <dbo_product> <ent> sep_dot var_uri <dbp_keyPeople> <ent> sep_dot var_uri <rdf_type> <dbo_company> brack_close
+select distinct var_uri where brack_open var_x <dbo_designer> <ent> sep_dot var_x <dbo_developer> var_uri sep_dot var_x <rdf_type> <dbo_language> brack_close
+select distinct var_uri where brack_open var_x <dbo_language> <ent> sep_dot var_uri <dbo_author> var_x sep_dot brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_uri <dbo_athletics> <ent> sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_keyPerson> var_x sep_dot var_x <dbo_award> var_uri sep_dot brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_uri <dbo_league> <ent> sep_dot brack_close
+select distinct var_uri where brack_open var_x <dbo_writer> <ent> sep_dot var_x <dbo_writer> var_uri sep_dot var_x <rdf_type> <dbo_comic> brack_close
+select distinct var_uri where brack_open <ent> <dbo_executiveProducer> var_x sep_dot var_x <dbo_award> var_uri sep_dot brack_close
+ask where brack_open <ent> <dbo_animator> <ent> brack_close
+select distinct var_uri where brack_open var_x <dbo_routeStart> <ent> sep_dot var_x <dbo_county> var_uri sep_dot var_x <rdf_type> <dbo_road> brack_close
+select distinct var_uri where brack_open var_uri <dbo_leader> <ent> sep_dot var_uri <dbo_leader> <ent> sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_leader> var_x sep_dot var_x <dbo_religion> var_uri sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_owner> var_uri sep_dot <ent> <dbo_developer> var_uri brack_close
+select distinct var_uri where brack_open var_x <dbo_employer> <ent> sep_dot var_x <dbo_hometown> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_x <dbo_editing> <ent> sep_dot var_x <dbo_starring> var_uri sep_dot var_x <rdf_type> <dbo_film> brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_chairman> <ent> sep_dot var_x <dbo_homeStadium> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_x <dbp_characters> <ent> sep_dot var_x <dbo_writer> var_uri sep_dot var_x <rdf_type> <dbo_play> brack_close
+select distinct var_uri where brack_open <ent> <dbo_ground> var_uri brack_close
+select distinct var_uri where brack_open var_x <dbo_lieutenant> <ent> sep_dot var_x <dbo_appointer> var_uri sep_dot var_x <rdf_type> <dbo_governor> brack_close
+select distinct var_uri where brack_open var_uri <dbo_family> <ent> sep_dot var_uri <rdf_type> <dbo_bird> brack_close
+select distinct var_uri where brack_open <ent> <dbo_county> var_uri sep_dot <ent> <dbo_birthPlace> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbp_currentTeam> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_writer> var_uri brack_close
+ask where brack_open <ent> <dbo_largestCity> <ent> brack_close
+select distinct var_uri where brack_open <ent> <dbo_highschool> var_uri brack_close
+ask where brack_open <ent> <dbo_editing> <ent> brack_close
+select distinct var_uri where brack_open var_x <dbo_kingdom> <ent> sep_dot var_x <dbo_family> var_uri sep_dot var_x <rdf_type> <dbo_mammal> brack_close
+select distinct var_uri where brack_open var_x <dbo_locationCountry> <ent> sep_dot var_x <dbo_type> var_uri sep_dot var_x <rdf_type> <dbo_building> brack_close
+select distinct var_uri where brack_open <ent> <dbo_field> var_uri brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_publisher> <ent> sep_dot var_x <dbo_genre> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_x <dbo_breeder> <ent> sep_dot var_x <dbo_race> var_uri sep_dot var_x <rdf_type> <dbo_horse> brack_close
+ask where brack_open <ent> <dbp_characters> <ent> brack_close
+select distinct count attr_open var_uri attr_close where brack_open <ent> <dbo_inflow> var_uri sep_dot brack_close
+ask where brack_open <ent> <dbo_trainer> <ent> brack_close
+select distinct var_uri where brack_open <ent> <dbo_homeStadium> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_deathPlace> var_uri brack_close
+select distinct var_uri where brack_open var_x <dbo_predecessor> <ent> sep_dot var_x <dbo_restingPlace> var_uri sep_dot var_x <rdf_type> <dbo_monarch> brack_close
+select distinct var_uri where brack_open <ent> <dbp_borough> var_uri brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_locationCity> <ent> sep_dot var_uri <dbo_distributor> var_x sep_dot var_uri <rdf_type> <dbo_televisionShow> brack_close
+ask where brack_open <ent> <dbo_illustrator> <ent> brack_close
+select distinct var_uri where brack_open <ent> <dbo_nearestCity> var_uri brack_close
+ask where brack_open <ent> <dbo_institution> <ent> brack_close
+select distinct var_uri where brack_open var_uri <dbo_club> <ent> brack_close
+select distinct var_uri where brack_open <ent> <dbo_album> var_x sep_dot var_x <dbo_producer> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_x <dbo_bandMember> <ent> sep_dot var_uri <dbp_themeMusicComposer> var_x sep_dot var_uri <rdf_type> <dbo_televisionShow> brack_close
+select distinct var_uri where brack_open var_x <dbp_religiousAffiliation> <ent> sep_dot var_x <dbo_sport> var_uri sep_dot var_x <rdf_type> <dbo_school> brack_close
+select distinct var_uri where brack_open var_x <dbo_recordLabel> <ent> sep_dot var_uri <dbp_themeMusicComposer> var_x sep_dot var_uri <rdf_type> <dbo_televisionShow> brack_close
+select distinct var_uri where brack_open var_x <dbo_locationCity> <ent> sep_dot var_uri <dbo_cpu> var_x sep_dot var_uri <rdf_type> <dbo_informationAppliance> brack_close
+select distinct var_uri where brack_open <ent> <dbo_league> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_author> var_x sep_dot var_x <dbo_genre> var_uri sep_dot brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_currentMember> <ent> sep_dot var_x <dbo_bandMember> var_uri sep_dot var_uri <rdf_type> <dbo_person> brack_close
+select distinct var_uri where brack_open <ent> <dbo_child> var_uri brack_close
+ask where brack_open <ent> <dbo_gender> <ent> brack_close
+select distinct var_uri where brack_open var_x <dbo_league> <ent> sep_dot var_x <dbp_nickname> var_uri sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_computingPlatform> var_x sep_dot var_x <dbo_developer> var_uri sep_dot var_x <rdf_type> <dbo_software> brack_close
+select distinct var_uri where brack_open var_uri <dbp_judges> <ent> sep_dot var_uri <dbp_judges> <ent> sep_dot var_uri <rdf_type> <dbo_televisionShow> brack_close
+select distinct var_uri where brack_open var_x <dbo_child> <ent> sep_dot var_x <dbo_successor> var_uri sep_dot var_x <rdf_type> <dbo_governor> brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_uri <dbo_manufacturer> <ent> sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbp_nationalOrigin> var_uri sep_dot <ent> <dbo_origin> var_uri brack_close
+select distinct var_uri where brack_open var_uri <dbo_class> <ent> sep_dot var_uri <rdf_type> <dbo_bacteria> brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_launchSite> <ent> sep_dot var_x <dbo_launchSite> var_uri brack_close
+select distinct var_uri where brack_open var_uri <dbo_creator> <ent> sep_dot var_uri <dbo_creator> <ent> sep_dot brack_close
+select distinct var_uri where brack_open var_x <dbo_archipelago> <ent> sep_dot var_x <dbo_nearestCity> var_uri sep_dot var_x <rdf_type> <dbo_island> brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_honours> <ent> sep_dot var_x <dbo_birthPlace> var_uri sep_dot var_uri <rdf_type> <dbo_place> brack_close
+select distinct count attr_open var_uri attr_close where brack_open <ent> <dbo_party> var_x sep_dot var_x <dbo_ideology> var_uri sep_dot var_x <rdf_type> <dbo_politicalParty> brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_birthPlace> <ent> sep_dot var_x <dbo_religion> var_uri sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_state> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_employer> var_uri brack_close
+select distinct var_uri where brack_open var_uri <dbo_executiveProducer> <ent> sep_dot var_uri <rdf_type> <dbo_televisionShow> brack_close
+select distinct var_uri where brack_open <ent> <dbo_service> var_uri sep_dot <ent> <dbp_result> var_uri brack_close
+select distinct var_uri where brack_open var_uri <dbo_capital> <ent> sep_dot var_uri <dbo_capital> <ent> sep_dot var_uri <rdf_type> <dbo_country> brack_close
+select distinct var_uri where brack_open var_x <dbo_associatedBand> <ent> sep_dot var_x <dbo_occupation> var_uri sep_dot var_x <rdf_type> <dbo_artist> brack_close
+select distinct var_uri where brack_open <ent> <dbo_lyrics> var_uri brack_close
+select distinct var_uri where brack_open var_uri <dbo_associatedBand> <ent> brack_close
+select distinct var_uri where brack_open var_uri <dbo_trainer> <ent> sep_dot var_uri <rdf_type> <dbo_martialArtist> brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_occupation> <ent> sep_dot var_x <dbo_award> var_uri sep_dot brack_close
+ask where brack_open <ent> <dbp_pastMembers> <ent> brack_close
+select distinct count attr_open var_uri attr_close where brack_open <ent> <dbp_membership> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_x <dbo_author> <ent> sep_dot var_x <dbo_basedOn> var_uri sep_dot var_x <rdf_type> <dbo_musical> brack_close
+select distinct var_uri where brack_open var_x <dbo_regionServed> <ent> sep_dot var_x <dbo_regionServed> var_uri sep_dot var_x <rdf_type> <dbo_company> brack_close
+select distinct var_uri where brack_open <ent> <dbo_location> var_uri sep_dot <ent> <dbo_deathPlace> var_uri brack_close
+select distinct var_uri where brack_open var_x <dbo_predecessor> <ent> sep_dot var_uri <dbo_associate> var_x sep_dot brack_close
+select distinct var_uri where brack_open var_x <dbo_recordLabel> <ent> sep_dot var_uri <dbp_themeMusicComposer> var_x sep_dot var_uri <rdf_type> <dbo_televisionShow> brack_close
+select distinct var_uri where brack_open var_x <dbo_league> <ent> sep_dot var_x <dbo_formerTeam> var_uri sep_dot brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_hometown> <ent> sep_dot var_uri <dbp_themeMusicComposer> var_x sep_dot var_uri <rdf_type> <dbo_televisionShow> brack_close
+select distinct var_uri where brack_open var_x <dbo_musicBy> <ent> sep_dot var_x <dbo_basedOn> var_uri sep_dot var_x <rdf_type> <dbo_musical> brack_close
+select distinct var_uri where brack_open var_x <dbo_deathCause> <ent> sep_dot var_x <dbo_citizenship> var_uri sep_dot var_x <rdf_type> <dbo_model> brack_close
+select distinct var_uri where brack_open <ent> <dbo_leaderName> var_uri sep_dot <ent> <dbo_otherParty> var_uri brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_uri <dbo_cinematography> <ent> sep_dot var_uri <rdf_type> <dbo_film> brack_close
+select distinct var_uri where brack_open var_x <dbp_music> <ent> sep_dot var_x <dbo_basedOn> var_uri sep_dot var_x <rdf_type> <dbo_musical> brack_close
+select distinct var_uri where brack_open var_x <dbo_programmingLanguage> <ent> sep_dot var_x <dbo_developer> var_uri sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_writer> var_x sep_dot var_x <dbo_award> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_uri <dbo_network> <ent> sep_dot var_uri <dbo_related> <ent> sep_dot var_uri <rdf_type> <dbo_televisionShow> brack_close
+select distinct var_uri where brack_open var_uri <dbo_artist> <ent> sep_dot var_uri <dbo_starring> <ent> sep_dot var_uri <rdf_type> <dbo_televisionShow> brack_close
+select distinct var_uri where brack_open var_x <dbo_predecessor> <ent> sep_dot var_uri <dbo_spouse> var_x sep_dot var_uri <rdf_type> <dbo_royalty> brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_award> <ent> sep_dot var_x <dbo_award> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_nationality> var_uri sep_dot <ent> <dbo_nationality> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_origin> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_location> var_uri sep_dot <ent> <dbo_state> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_designer> var_x sep_dot var_x <dbo_deathPlace> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_x <dbo_college> <ent> sep_dot var_x <dbo_debutTeam> var_uri sep_dot var_x <rdf_type> <dbo_gridironFootballPlayer> brack_close
+select distinct var_uri where brack_open var_x <dbo_almaMater> <ent> sep_dot var_x <dbo_draftTeam> var_uri sep_dot var_x <rdf_type> <dbo_person> brack_close
+select distinct var_uri where brack_open <ent> <dbo_series> var_uri brack_close
+ask where brack_open <ent> <dbo_largestCity> <ent> brack_close
+select distinct var_uri where brack_open <ent> <dbo_governor> var_uri brack_close
+select distinct var_uri where brack_open var_uri <dbo_campus> <ent> sep_dot var_uri <dbo_campus> <ent> sep_dot var_uri <rdf_type> <dbo_educationalInstitution> brack_close
+select distinct var_uri where brack_open <ent> <dbo_religion> var_uri brack_close
+select distinct var_uri where brack_open var_x <dbo_writer> <ent> sep_dot var_x <dbo_recordLabel> var_uri sep_dot var_x <rdf_type> <dbo_single> brack_close
+select distinct var_uri where brack_open var_uri <dbo_voice> <ent> sep_dot var_uri <dbo_voice> <ent> sep_dot var_uri <rdf_type> <dbo_televisionShow> brack_close
+select distinct var_uri where brack_open <ent> <dbo_series> var_uri sep_dot <ent> <dbo_series> var_uri sep_dot brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_uri <dbo_veneratedIn> <ent> sep_dot var_uri <dbo_veneratedIn> <ent> brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_uri <dbo_programmingLanguage> <ent> sep_dot var_uri <dbo_operatingSystem> <ent> brack_close
+select distinct var_uri where brack_open <ent> <dbo_child> var_uri brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_uri <dbo_musicComposer> <ent> sep_dot var_uri <rdf_type> <dbo_film> brack_close
+select distinct var_uri where brack_open <ent> <dbp_teamName> var_uri sep_dot <ent> <dbp_mascot> var_uri brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_firstDriver> <ent> sep_dot var_x <dbo_poleDriver> var_uri sep_dot var_uri <rdf_type> <dbo_formulaOneRacer> brack_close
+select distinct var_uri where brack_open <ent> <dbo_party> var_uri sep_dot <ent> <dbo_party> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_x <dbo_almaMater> <ent> sep_dot var_x <dbo_nationality> var_uri sep_dot var_x <rdf_type> <dbo_person> brack_close
+select distinct var_uri where brack_open var_x <dbo_owningCompany> <ent> sep_dot var_uri <dbo_company> var_x sep_dot var_uri <rdf_type> <dbo_televisionShow> brack_close
+select distinct var_uri where brack_open var_x <dbo_party> <ent> sep_dot var_x <dbo_religion> var_uri sep_dot var_x <rdf_type> <dbo_person> brack_close
+ask where brack_open <ent> <dbo_previousWork> <ent> brack_close
+select distinct var_uri where brack_open <ent> <dbo_editor> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_musicalBand> var_uri sep_dot <ent> <dbo_musicalBand> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_x <dbo_predecessor> <ent> sep_dot var_x <dbo_manufacturer> var_uri sep_dot var_x <rdf_type> <dbo_engine> brack_close
+select distinct var_uri where brack_open var_x <dbo_ground> <ent> sep_dot var_uri <dbp_currentclub> var_x sep_dot var_uri <rdf_type> <dbo_soccerPlayer> brack_close
+select distinct var_uri where brack_open var_x <dbo_publisher> <ent> sep_dot var_x <dbo_nonFictionSubject> var_uri sep_dot var_x <rdf_type> <dbo_book> brack_close
+select distinct var_uri where brack_open <ent> <dbo_nationality> var_uri sep_dot <ent> <dbo_nationality> var_uri brack_close
+select distinct var_uri where brack_open var_x <dbo_chairman> <ent> sep_dot var_x <dbo_homeStadium> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_x <dbp_engine> <ent> sep_dot var_x <dbo_related> var_uri sep_dot var_x <rdf_type> <dbo_automobile> brack_close
+select distinct var_uri where brack_open var_uri <dbo_openingTheme> <ent> sep_dot var_uri <rdf_type> <dbo_televisionShow> brack_close
+select distinct var_uri where brack_open <ent> <dbo_board> var_uri brack_close
+select distinct var_uri where brack_open var_x <dbo_anthem> <ent> sep_dot var_x <dbo_currency> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_x <dbo_team> <ent> sep_dot var_x <dbo_debutTeam> var_uri sep_dot var_x <rdf_type> <dbo_athlete> brack_close
+ask where brack_open <ent> <dbo_routeJunction> <ent> brack_close
+select distinct var_uri where brack_open var_x <dbo_locatedInArea> <ent> sep_dot var_uri <dbo_parentMountainPeak> var_x sep_dot var_uri <rdf_type> <dbo_mountain> brack_close
+select distinct var_uri where brack_open var_x <dbp_playedFor> <ent> sep_dot var_x <dbo_formerTeam> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_x <dbo_headquarter> <ent> sep_dot var_uri <dbo_company> var_x sep_dot brack_close
+select distinct count attr_open var_uri attr_close where brack_open <ent> <dbo_region> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_x <dbo_assembly> <ent> sep_dot var_x <dbo_parentCompany> var_uri sep_dot var_x <rdf_type> <dbo_automobile> brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_place> <ent> sep_dot var_x <dbo_writer> var_uri sep_dot brack_close
+ask where brack_open <ent> <dbo_canonizedBy> <ent> brack_close
+select distinct var_uri where brack_open <ent> <dbo_capital> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_residence> var_uri sep_dot <ent> <dbo_residence> var_uri sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_isPartOf> var_x sep_dot var_x <dbo_headquarter> var_uri sep_dot var_x <rdf_type> <dbo_publicTransitSystem> brack_close
+select distinct var_uri where brack_open <ent> <dbo_mountainRange> var_uri brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_uri <dbo_relation> <ent> sep_dot brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_battle> <ent> sep_dot var_x <dbo_battle> var_uri sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_builder> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_author> var_uri sep_dot <ent> <dbo_author> var_uri sep_dot brack_close
+select distinct count attr_open var_uri attr_close where brack_open <ent> <dbo_country> var_uri sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_manufacturer> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_governingBody> var_uri brack_close
+select distinct var_uri where brack_open var_uri <dbo_executiveProducer> <ent> sep_dot var_uri <dbo_company> <ent> sep_dot var_uri <rdf_type> <dbo_televisionShow> brack_close
+select distinct var_uri where brack_open <ent> <dbo_hometown> var_uri brack_close
+select distinct var_uri where brack_open var_x <dbo_child> <ent> sep_dot var_x <dbo_party> var_uri sep_dot var_x <rdf_type> <dbo_officeHolder> brack_close
+select distinct var_uri where brack_open <ent> <dbo_field> var_uri sep_dot <ent> <dbo_occupation> var_uri brack_close
+select distinct var_uri where brack_open var_x <dbo_city> <ent> sep_dot var_x <dbo_owner> var_uri sep_dot var_x <rdf_type> <dbo_airport> brack_close
+select distinct count attr_open var_uri attr_close where brack_open <ent> <dbo_creator> var_x sep_dot var_x <dbo_notableWork> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_uri <dbo_majorShrine> <ent> sep_dot var_uri <dbo_veneratedIn> <ent> sep_dot var_uri <rdf_type> <dbo_saint> brack_close
+select distinct var_uri where brack_open <ent> <dbo_region> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_developer> var_uri sep_dot <ent> <dbo_distributor> var_uri sep_dot brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_uri <dbo_leaderName> <ent> sep_dot var_uri <rdf_type> <dbo_place> brack_close
+select distinct var_uri where brack_open var_x <dbo_designCompany> <ent> sep_dot var_x <dbo_designer> var_uri sep_dot var_x <rdf_type> <dbo_automobile> brack_close
+select distinct var_uri where brack_open var_uri <dbo_restingPlace> <ent> sep_dot var_uri <rdf_type> <dbo_officeHolder> brack_close
+select distinct var_uri where brack_open var_uri <dbo_origin> <ent> brack_close
+select distinct var_uri where brack_open <ent> <dbo_automobilePlatform> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_champion> var_x sep_dot var_x <dbo_nationality> var_uri sep_dot var_x <rdf_type> <dbo_golfPlayer> brack_close
+select distinct var_uri where brack_open <ent> <dbp_recorded> var_uri sep_dot <ent> <dbo_headquarter> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_governor> var_uri sep_dot <ent> <dbo_president> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_debutTeam> var_uri brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_hometown> <ent> sep_dot var_uri <dbp_music> var_x sep_dot var_uri <rdf_type> <dbo_film> brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_uri <dbo_language> <ent> sep_dot var_uri <rdf_type> <dbo_ethnicGroup> brack_close
+select distinct var_uri where brack_open <ent> <dbo_regionServed> var_uri sep_dot <ent> <dbo_border> var_uri brack_close
+ask where brack_open <ent> <dbo_division> <ent> brack_close
+select distinct var_uri where brack_open <ent> <dbp_constituency> var_uri sep_dot <ent> <dbo_country> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_award> var_uri sep_dot <ent> <dbo_knownFor> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_author> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbp_office> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_knownFor> var_uri sep_dot <ent> <dbo_publisher> var_uri brack_close
+select distinct count attr_open var_uri attr_close where brack_open var_x <dbo_deathPlace> <ent> sep_dot var_x <dbo_religion> var_uri sep_dot brack_close
+select distinct var_uri where brack_open var_x <dbo_award> <ent> sep_dot var_x <dbo_restingPlace> var_uri sep_dot brack_close
+select distinct var_uri where brack_open <ent> <dbo_education> var_uri brack_close
+select distinct var_uri where brack_open <ent> <dbo_currency> var_uri brack_close
+select distinct var_uri where brack_open var_x <dbp_workInstitutions> <ent> sep_dot var_x <dbp_workInstitutions> var_uri sep_dot var_x <rdf_type> <dbo_medician> brack_close

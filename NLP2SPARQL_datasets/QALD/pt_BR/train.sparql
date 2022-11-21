@@ -1,0 +1,4 @@
+select distinct var_uri where brack_open var_x <rdf_type> <dbo_album> sep_semi <dbo_artist> <dbr_Elvis_Presley> sep_semi <dbo_releaseDate> var_y sep_semi <dbo_recordLabel> var_uri brack_close _oba_ var_y offset 0 limit 1
+ask where brack_open <dbr_Batman_Begins> <dbo_starring> <dbr_Christian_Bale> brack_close
+ask where brack_open <dbr_Battlestar_Galactica_%281978_TV_series%29> <dbo_numberOfEpisodes> var_x sep_dot <dbr_Battlestar_Galactica_%282004_TV_series%29> <dbo_numberOfEpisodes> var_y filter par_open var_y math_gt var_x par_close brack_close
+select distinct var_uri where brack_open <dbr_Fort_Knox> <dbo_location> var_uri sep_dot var_uri <dbo_country> <dbr_United_States> brack_close
