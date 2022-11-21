@@ -70,7 +70,7 @@ def read_examples(query_file, question_file):
     with open(query_file, encoding="utf-8") as query_f:
         with open(question_file, encoding='utf-8') as question_f:
             for idx, (query, question) in enumerate(zip(query_f, question_f)):
-                print(question.strip(), query.strip())
+                #print(question.strip(), query.strip())
                 examples.append(
                     Example(
                         idx=idx,
@@ -291,11 +291,11 @@ def main():
         if args.dev_filename is not None:
             files.append(args.dev_filename)
         if args.test_filename is not None:
-            files.append(args.test_filename)
+            #files.append(args.test_filename)
+            pass
         for idx, file in enumerate(files):
             logger.info("Test file: {}".format(file))
             eval_examples = read_examples(file + "." + args.source, file + "." + args.target)
-            print(eval_examples)
             eval_features = convert_examples_to_features(eval_examples, tokenizer, args, stage='test')
             all_source_ids = torch.tensor([f.source_ids for f in eval_features], dtype=torch.long)
             all_source_mask = torch.tensor([f.source_mask for f in eval_features], dtype=torch.long)
