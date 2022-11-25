@@ -17,9 +17,9 @@ TRG=sparql
 # Download the corpus
 #
 mkdir -p $CORPUS
-cp ../../drive/MyDrive/NLP2SPARQL_datasets/LC-QUAD/train.* $CORPUS
-cp ../../drive/MyDrive/NLP2SPARQL_datasets/LC-QUAD/test.* $CORPUS
-cp ../../drive/MyDrive/NLP2SPARQL_datasets/LC-QUAD/dev.* $CORPUS
+cp ../../drive/MyDrive/NLP2SPARQL_datasets/LCQUAD/train.* $CORPUS
+cp ../../drive/MyDrive/NLP2SPARQL_datasets/LCQUAD/test.* $CORPUS
+cp ../../drive/MyDrive/NLP2SPARQL_datasets/LCQUAD/dev.* $CORPUS
 
 #
 # Download the BERT model
