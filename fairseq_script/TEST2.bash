@@ -87,7 +87,7 @@ test_main () {
     cat $output.log \
 	| grep -e '^H\-' | sed -e 's/^H-//' \
 	| sort -k 1 -n | cut -f 3 \
-	| python ${fairseq_root}/scripts/spm_encode.py --model=$CORPUS/train.spm.$TRG.model \
+	| python ${fairseq_root}/scripts/spm_decode.py --model=$CORPUS/train.spm.$TRG.model \
 		     --input_format=piece > $output.out
 }
 test_main $OUTPUT
