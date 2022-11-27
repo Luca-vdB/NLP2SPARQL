@@ -270,9 +270,11 @@ def main():
 
     if args.load_model_path is not None:
         logger.info("reload model from {}".format(args.load_model_path))
-
-        for key in list(model.state_dict.keys()):
-            model.state_dict[key.replace('bert', 'encoder')] = model.state_dict.pop(key)
+        from collections import OrderedDict
+        new_state_dict = OrderedDict()
+        for key in list(model.state_dict().keys()):
+            new_state_dict[key.replace('bert', 'encoder')] = model.state_dict()[key]
+        model.load_state_dict(new_state_dict)
 
         model.load_state_dict(torch.load(args.load_model_path))  # Removed  strict=False, need to fix this!
 
