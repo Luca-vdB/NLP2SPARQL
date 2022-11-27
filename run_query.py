@@ -272,7 +272,7 @@ def main():
         logger.info("reload model from {}".format(args.load_model_path))
 
         for key in list(model.state_dict().keys()):
-            model.state_dict()[key.replace('bert', 'encoder')] = model.state_dict().pop(key)
+            model.state_dict[key.replace('bert', 'encoder')] = model.state_dict.pop(key)
 
         model.load_state_dict(torch.load(args.load_model_path))  # Removed  strict=False, need to fix this!
 
