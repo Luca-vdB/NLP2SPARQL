@@ -35,12 +35,13 @@ from torch.utils.data import DataLoader, SequentialSampler, RandomSampler, Tenso
 from torch.utils.data.distributed import DistributedSampler
 from tqdm import tqdm
 from transformers import (AdamW, get_linear_schedule_with_warmup,
-                          RobertaConfig, RobertaModel, RobertaTokenizer, BertConfig, BertModel, BertTokenizer)
+                          RobertaConfig, RobertaModel, RobertaTokenizer, BertConfig, BertModel, BertTokenizer, )
 
 from model import Seq2Seq, BertSeq2Seq
 
 MODEL_CLASSES = {'roberta': (RobertaConfig, RobertaModel, RobertaTokenizer),
-                 'bert': (BertConfig, BertModel, BertTokenizer)}
+                 'bert': (BertConfig, BertModel, BertTokenizer),
+                 'spbert': ()}
 
 logging.basicConfig(format='%(asctime)s - %(levelname)s - %(name)s -   %(message)s',
                     datefmt='%m/%d/%Y %H:%M:%S',
@@ -282,7 +283,7 @@ def main():
         decoder = model_class.from_pretrained(args.decoder_model_name_or_path, config=decoder_config)
         model = BertSeq2Seq(encoder=encoder, decoder=decoder, config=config,
                             beam_size=args.beam_size, max_length=args.max_target_length,
-                            sos_id=tokenizer.cls_token_id, eos_id=tokenizer.sep_token_id)
+                            sos_id=tokenizer.cls_token_id, eos_id=tokenizer.sep_token_id)       
     else:
         raise Exception("Model architecture is not valid.")
 
@@ -452,10 +453,10 @@ def main():
             
             files.append('example')
         
-        #if args.dev_filename is not None:
-            #files.append(args.dev_filename)
-        #if args.test_filename is not None:
-            #files.append(args.test_filename)
+        if args.dev_filename is not None:
+            files.append(args.dev_filename)
+        if args.test_filename is not None:
+            files.append(args.test_filename)
 
         for idx, file in enumerate(files):
             logger.info("Test file: {}".format(file))
