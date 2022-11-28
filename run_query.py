@@ -272,11 +272,11 @@ def main():
         logger.info("reload model from {}".format(args.load_model_path))
         from collections import OrderedDict
         new_state_dict = OrderedDict()
-        for key in list(model.state_dict().keys()):
-            new_state_dict[key.replace('bert', 'encoder')] = model.state_dict()[key]
-        model.load_state_dict(new_state_dict)
-
-        model.load_state_dict(torch.load(args.load_model_path))  # Removed  strict=False, need to fix this!
+        dict_loaded = torch.load(args.load_model_path)
+        for key in list(dict_loaded.keys()):
+            new_state_dict[key.replace("bert.", "encoder.")] = dict_loaded[key]
+        print(model.state_dict().keys())
+        model.load_state_dict(new_state_dict)  # Removed  strict=False, need to fix this!
 
     model.to(device)
     if args.local_rank != -1:
