@@ -488,21 +488,17 @@ def main():
             predictions = []
             pred_str = []
             label_str = []
-            with open(os.path.join(args.output_dir, "test_{}.output".format(str(idx))), 'w') as f, open(
-                    os.path.join(args.output_dir, "test_{}.gold".format(str(idx))), 'w') as f1:
-                for ref, gold in zip(p, eval_examples):
-                    ref = ref.strip().replace('< ', '<').replace(' >', '>')
-                    ref = re.sub(r' ?([!"#$%&\'(’)*+,-./:;=?@\\^_`{|}~]) ?', r'\1', ref)
-                    ref = ref.replace('attr_close>', 'attr_close >').replace('_attr_open', '_ attr_open')
-                    ref = ref.replace(' [ ', ' [').replace(' ] ', '] ')
-                    ref = ref.replace('_obd_', ' _obd_ ').replace('_oba_', ' _oba_ ')
+            for ref, gold in zip(p, eval_examples):
+                ref = ref.strip().replace('< ', '<').replace(' >', '>')
+                ref = re.sub(r' ?([!"#$%&\'(’)*+,-./:;=?@\\^_`{|}~]) ?', r'\1', ref)
+                ref = ref.replace('attr_close>', 'attr_close >').replace('_attr_open', '_ attr_open')
+                ref = ref.replace(' [ ', ' [').replace(' ] ', '] ')
+                ref = ref.replace('_obd_', ' _obd_ ').replace('_oba_', ' _oba_ ')
 
-                    pred_str.append(ref.split())
-                    label_str.append([gold.target.strip().split()])
-                    predictions.append(str(gold.idx) + '\t' + ref)
-                    f.write(str(gold.idx) + '\t' + ref + '\n')
-                    f1.write(str(gold.idx) + '\t' + gold.target + '\n')
-            print(label_str, pred_str)
+                pred_str.append(ref.split())
+                label_str.append([gold.target.strip().split()])
+                predictions.append(str(gold.idx) + '\t' + ref)
+                print(str(gold.idx) + '\t' + ref + '\n')
 
             bl_score = corpus_bleu(label_str, pred_str) * 100
             logger.info("  %s = %s " % ("BLEU", str(round(bl_score, 4))))
