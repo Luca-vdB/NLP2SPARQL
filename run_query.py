@@ -298,7 +298,6 @@ def question_to_sparql(model, tokenizer, args, question):
                     t = t[:t.index(0)]
                 text = tokenizer.decode(t, clean_up_tokenization_spaces=False)
                 p.append(text)
-                print(text)
     model.train()
     predictions = []
     pred_str = []
