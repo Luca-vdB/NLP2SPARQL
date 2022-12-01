@@ -322,4 +322,4 @@ if __name__ == "__main__":
     model, tokenizer, args = main()
     while True:
         question = input("Ask a question: ")
-        print(question_to_sparql(model, tokenizer, args, question))
+        question_to_sparql(model, tokenizer, args, question)
