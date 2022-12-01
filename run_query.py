@@ -264,20 +264,7 @@ def main():
 
     if args.load_model_path is not None:
         logger.info("reload model from {}".format(args.load_model_path))
-        from collections import OrderedDict
-        new_state_dict = OrderedDict()
-        dict_loaded = torch.load(args.load_model_path)
-        for key in list(dict_loaded.keys()):
-            new_state_dict[key.replace("bert.", "encoder.")] = dict_loaded[key]
-       
-        unexpected_weights = ["cls.predictions.bias", "cls.predictions.transform.dense.weight", "cls.predictions.transform.dense.bias", "cls.predictions.transform.LayerNorm.weight", "cls.predictions.transform.LayerNorm.bias", "cls.predictions.decoder.weight", "cls.predictions.decoder.bias"]
-        for w in unexpected_weights:
-          new_state_dict.pop(w)
-
-        
-        print(model.state_dict().keys())
-        print(new_state_dict.keys())
-        model.load_state_dict(new_state_dict)  # Removed  strict=False, need to fix this!
+        model.load_state_dict(torch.load(args.load_model_path))
 
     model.to(device)
     return model, tokenizer, args
