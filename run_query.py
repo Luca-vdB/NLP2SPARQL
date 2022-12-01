@@ -169,8 +169,6 @@ def main():
                         help="Path to pre-trained model: e.g. roberta-base")
     parser.add_argument("--decoder_model_name_or_path", default=None, type=str, required=True,
                         help="Path to pre-trained model: e.g. roberta-base")
-    parser.add_argument("--output_dir", default=None, type=str, required=True,
-                        help="The output directory where the model predictions and checkpoints will be written.")
     parser.add_argument("--load_model_path", default=None, type=str,
                         help="Path to trained model: Should contain the .bin files")
     ## Other parameters
@@ -239,9 +237,6 @@ def main():
     args.device = device
     # Set seed
     set_seed(args.seed)
-    # make dir if output_dir not exist
-    if os.path.exists(args.output_dir) is False:
-        os.makedirs(args.output_dir)
 
     config_class, model_class, tokenizer_class = MODEL_CLASSES[args.model_type]
     config = config_class.from_pretrained(args.config_name if args.config_name else args.encoder_model_name_or_path)
