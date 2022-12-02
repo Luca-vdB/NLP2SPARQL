@@ -309,7 +309,7 @@ def question_to_sparql(model, tokenizer, args, question):
         ref = ref.replace('attr_close>', 'attr_close >').replace('_attr_open', '_ attr_open')
         ref = ref.replace(' [ ', ' [').replace(' ] ', '] ')
         ref = ref.replace('_obd_', ' _obd_ ').replace('_oba_', ' _oba_ ')
-        ref = ref.replace("var_", "?").replace("brack_open", "{").replace("brack_close", "}").replace("<dbr_", "dbr:").replace("<dbo_", "dbo:").replace(">", "")
+        ref = ref.replace("var_", "?").replace("brack_open", "{").replace("brack_close", "}").replace("<dbr_", "dbr:").replace("<dbo_", "dbo:").replace(">", "").replace("sep_dot", ".")
 
         pred_str.append(ref.split())
         label_str.append([gold.target.strip().split()])
