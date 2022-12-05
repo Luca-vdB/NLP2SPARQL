@@ -169,8 +169,6 @@ def main():
                         help="Path to pre-trained model: e.g. roberta-base")
     parser.add_argument("--decoder_model_name_or_path", default=None, type=str, required=True,
                         help="Path to pre-trained model: e.g. roberta-base")
-    parser.add_argument("--output_dir", default=None, type=str, required=True,
-                        help="The output directory where the model predictions and checkpoints will be written.")
     parser.add_argument("--load_model_path", default=None, type=str,
                         help="Path to trained model: Should contain the .bin files")
     ## Other parameters
@@ -235,14 +233,10 @@ def main():
         device = torch.device("cuda", args.local_rank)
         torch.distributed.init_process_group(backend='nccl')
         args.n_gpu = 1
-    logger.warning("Process rank: %s, device: %s, n_gpu: %s, distributed training: %s",
-                   args.local_rank, device, args.n_gpu, bool(args.local_rank != -1))
+
     args.device = device
     # Set seed
     set_seed(args.seed)
-    # make dir if output_dir not exist
-    if os.path.exists(args.output_dir) is False:
-        os.makedirs(args.output_dir)
 
     config_class, model_class, tokenizer_class = MODEL_CLASSES[args.model_type]
     config = config_class.from_pretrained(args.config_name if args.config_name else args.encoder_model_name_or_path)
@@ -270,91 +264,61 @@ def main():
 
     if args.load_model_path is not None:
         logger.info("reload model from {}".format(args.load_model_path))
-        from collections import OrderedDict
-        new_state_dict = OrderedDict()
-        dict_loaded = torch.load(args.load_model_path)
-        for key in list(dict_loaded.keys()):
-            new_state_dict[key.replace("bert.", "encoder.")] = dict_loaded[key]
-       
-        unexpected_weights = ["cls.predictions.bias", "cls.predictions.transform.dense.weight", "cls.predictions.transform.dense.bias", "cls.predictions.transform.LayerNorm.weight", "cls.predictions.transform.LayerNorm.bias", "cls.predictions.decoder.weight", "cls.predictions.decoder.bias"]
-        for w in unexpected_weights:
-          new_state_dict.pop(w)
-
-        
-        print(model.state_dict().keys())
-        print(new_state_dict.keys())
-        model.load_state_dict(new_state_dict)  # Removed  strict=False, need to fix this!
+        model.load_state_dict(torch.load(args.load_model_path))
 
     model.to(device)
-    if args.local_rank != -1:
-        # Distributed training
-        try:
-            from apex.parallel import DistributedDataParallel as DDP
-        except ImportError:
-            raise ImportError(
-                "Please install apex from https://www.github.com/nvidia/apex to use distributed and fp16 training.")
+    return model, tokenizer, args
 
-        model = DDP(model)
-    elif args.n_gpu > 1:
-        # multi-gpu training
-        model = torch.nn.DataParallel(model)
+def question_to_sparql(model, tokenizer, args, question):
+    eval_examples = [Example(
+                        idx=0,
+                        source=question.strip(),
+                        target="",
+                    )]
+    eval_features = convert_examples_to_features(eval_examples, tokenizer, args, stage='test')
+    all_source_ids = torch.tensor([f.source_ids for f in eval_features], dtype=torch.long)
+    all_source_mask = torch.tensor([f.source_mask for f in eval_features], dtype=torch.long)
+    eval_data = TensorDataset(all_source_ids, all_source_mask)
 
-    if args.do_test:
-        files = []
-        if args.dev_filename is not None:
-            files.append(args.dev_filename)
-        if args.test_filename is not None:
-            #files.append(args.test_filename)
-            pass
-        for idx, file in enumerate(files):
-            logger.info("Test file: {}".format(file))
-            eval_examples = read_examples(file + "." + args.source, file + "." + args.target)
-            eval_features = convert_examples_to_features(eval_examples, tokenizer, args, stage='test')
-            all_source_ids = torch.tensor([f.source_ids for f in eval_features], dtype=torch.long)
-            all_source_mask = torch.tensor([f.source_mask for f in eval_features], dtype=torch.long)
-            eval_data = TensorDataset(all_source_ids, all_source_mask)
+    # Calculate bleu
+    eval_sampler = SequentialSampler(eval_data)
+    eval_dataloader = DataLoader(eval_data, sampler=eval_sampler, batch_size=args.eval_batch_size)
+    device = torch.device("cuda" if torch.cuda.is_available() and not args.no_cuda else "cpu")
+    model.eval()
+    p = []
+    for batch in tqdm(eval_dataloader, total=len(eval_dataloader)):
+        batch = tuple(t.to(device) for t in batch)
+        source_ids, source_mask = batch
+        with torch.no_grad():
+            preds = model(source_ids=source_ids, source_mask=source_mask)
+            for pred in preds:
+                t = pred[0].cpu().numpy()
+                t = list(t)
+                if 0 in t:
+                    t = t[:t.index(0)]
+                text = tokenizer.decode(t, clean_up_tokenization_spaces=False)
+                p.append(text)
+    model.train()
+    predictions = []
+    pred_str = []
+    label_str = []
 
-            # Calculate bleu
-            eval_sampler = SequentialSampler(eval_data)
-            eval_dataloader = DataLoader(eval_data, sampler=eval_sampler, batch_size=args.eval_batch_size)
+    for ref, gold in zip(p, eval_examples):
+        ref = ref.strip().replace('< ', '<').replace(' >', '>')
+        ref = re.sub(r' ?([!"#$%&\'(’)*+,-./:;=?@\\^_`{|}~]) ?', r'\1', ref)
+        ref = ref.replace('attr_close>', 'attr_close >').replace('_attr_open', '_ attr_open')
+        ref = ref.replace(' [ ', ' [').replace(' ] ', '] ')
+        ref = ref.replace('_obd_', ' _obd_ ').replace('_oba_', ' _oba_ ')
+        ref = ref.replace("var_", "?").replace("brack_open", "{").replace("brack_close", "}").replace("<dbr_", "dbr:").replace("<dbo_", "dbo:").replace(">", "").replace("sep_dot", ".")
 
-            model.eval()
-            p = []
-            for batch in tqdm(eval_dataloader, total=len(eval_dataloader)):
-                batch = tuple(t.to(device) for t in batch)
-                source_ids, source_mask = batch
-                with torch.no_grad():
-                    preds = model(source_ids=source_ids, source_mask=source_mask)
-                    for pred in preds:
-                        t = pred[0].cpu().numpy()
-                        t = list(t)
-                        if 0 in t:
-                            t = t[:t.index(0)]
-                        text = tokenizer.decode(t, clean_up_tokenization_spaces=False)
-                        p.append(text)
-                        print(text)
-            model.train()
-            predictions = []
-            pred_str = []
-            label_str = []
-            with open(os.path.join(args.output_dir, "test_{}.output".format(str(idx))), 'w') as f, open(
-                    os.path.join(args.output_dir, "test_{}.gold".format(str(idx))), 'w') as f1:
-                for ref, gold in zip(p, eval_examples):
-                    ref = ref.strip().replace('< ', '<').replace(' >', '>')
-                    ref = re.sub(r' ?([!"#$%&\'(’)*+,-./:;=?@\\^_`{|}~]) ?', r'\1', ref)
-                    ref = ref.replace('attr_close>', 'attr_close >').replace('_attr_open', '_ attr_open')
-                    ref = ref.replace(' [ ', ' [').replace(' ] ', '] ')
-                    ref = ref.replace('_obd_', ' _obd_ ').replace('_oba_', ' _oba_ ')
-
-                    pred_str.append(ref.split())
-                    label_str.append([gold.target.strip().split()])
-                    predictions.append(str(gold.idx) + '\t' + ref)
-                    f.write(str(gold.idx) + '\t' + ref + '\n')
-                    f1.write(str(gold.idx) + '\t' + gold.target + '\n')
-            bl_score = corpus_bleu(label_str, pred_str) * 100
-            logger.info("  %s = %s " % ("BLEU", str(round(bl_score, 4))))
-            logger.info("  " + "*" * 20)
+        pred_str.append(ref.split())
+        label_str.append([gold.target.strip().split()])
+        predictions.append(str(gold.idx) + '\t' + ref)
+        print(ref)
 
 
 if __name__ == "__main__":
-    main()
+    model, tokenizer, args = main()
+    while True:
+        question = input("Ask a question: ")
+        question_to_sparql(model, tokenizer, args, question)
