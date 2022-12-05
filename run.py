@@ -488,8 +488,8 @@ def main():
                     f1.write(str(gold.idx) + '\t' + gold.target + '\n')
 
             bl_score = corpus_bleu(label_str, pred_str) * 100
-            logger.info("  %s = %s " % ("BLEU", str(round(bl_score, 4))))
-            logger.info("  " + "*" * 20)
+            print("  %s = %s " % ("BLEU", str(round(bl_score, 4))))
+            print("  " + "*" * 20)
 
 
 if __name__ == "__main__":
